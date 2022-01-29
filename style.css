@@ -1,6 +1,19 @@
-div {
+#div1 {
     color: red;
+    border: solid black 2px;
+    padding: 50px;
+    margin-left: 33%;
+    margin-right: 33%;
+    text-align: center;
+    font-size: 45px;
+}
 
+#div1:hover {
+    padding: 50px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    font-size: 45px;
 }
 
 #welcome {
