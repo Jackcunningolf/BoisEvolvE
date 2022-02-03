@@ -1,0 +1,60 @@
+#header {
+    text-align: center;
+    border-bottom: solid black 2px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+#navigate > ul > li {
+    display: inline-block;
+    border: solid black 1px;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+ul > li:hover {
+    background-color: #d5d5d5;
+}
+
+.currPage {
+    background-color: red;
+}
+.currPage:hover {
+    background-color: #ec6313;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    border-top: solid black 2px;
+    background-color: white;
+}
+
+#contactTable {
+    padding-left: 40%;
+    padding-right: 40%;
+}
+
+#contactTable > table {
+    border-collapse: collapse;
+}
+
+thead > tr, th {
+    border: solid black 1px;
+    background-color: gray;
+}
+
+table > tr, td {
+    border: solid black 1px;
+    padding: 5px;
+    text-align: center;
+}
+
+table > tr, td:hover {
+    background-color: #aaa;
+}

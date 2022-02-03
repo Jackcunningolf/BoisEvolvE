@@ -43,8 +43,3 @@
     color: green;
     font-size: larger;
 }
-
-#list > li {
-    display: inline-block;
-}
-
