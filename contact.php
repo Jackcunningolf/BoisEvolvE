@@ -29,5 +29,13 @@ whaddup contact
 
 
 <?php
+
+    for ($heads = 1; $heads <= 6; $heads++) {
+        echo "<h{$heads}>" . "goodbye world" . "</h{$heads}>";
+    }
+    
+    $data = file("data.txt");
+    $sepdata = explode(" ", $data);
+    print_r($sepdata);
     require_once 'footer.php';
     ?>

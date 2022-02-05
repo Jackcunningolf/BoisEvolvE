@@ -32,7 +32,8 @@ footer {
     width: 100%;
     font-size: 50px;
     border-top: solid black 2px;
-    background-color: white;
+    background-color: yellowgreen;
+    opacity: 0.8;
 }
 
 #contactTable {

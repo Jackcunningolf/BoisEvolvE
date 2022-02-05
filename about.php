@@ -9,8 +9,9 @@
     $majors = array();
     $majors[] = "computer science";
     for ($i=1;$i<5;$i++) {
-        $majors[$i] = $i + 8;
+        $majors[] = $i . 8;
     }
+    
 ?>
 
 whaddup about <br>
