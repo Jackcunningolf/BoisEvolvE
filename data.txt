@@ -1,1 +1,4 @@
-Jack Josh Dallas Micheal Angelina Eric Micah Joanie Josh
+Jack,banana
+noa,orange
+izzy,strawberry
+hanson,kiwi

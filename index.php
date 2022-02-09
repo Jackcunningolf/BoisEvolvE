@@ -4,6 +4,8 @@
     echo '</head>';
 ?>
 
+<?php require_once 'feeds.php'; ?>
+
 <?php
     $currentPage = "index";
     require_once 'nav.php';

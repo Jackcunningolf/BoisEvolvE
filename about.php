@@ -4,6 +4,7 @@
     echo '</head>';
 
     $currentPage = "about";
+    require_once 'feeds.php';
     require_once 'nav.php';
 
     $majors = array();
@@ -15,6 +16,9 @@
 ?>
 
 whaddup about <br>
+
+
+
 <?php
     echo "<pre>" . print_r($majors, 1) . "</pre>";
 
