@@ -1,9 +1,10 @@
 <?php
-    require_once 'header.php';
-    echo '<h1 id="header"> Welcome to Boise Flavors about </h1>';
-    echo '</head>';
-
     $currentPage = "about";
+    require_once 'header.php';
+    // echo '<h1 id="header"> Welcome to Boise Flavors about </h1>';
+    // echo '</head>';
+
+    
     require_once 'feeds.php';
     require_once 'nav.php';
 

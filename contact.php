@@ -1,11 +1,12 @@
 <?php
+    $currentPage="contact";
     require_once 'header.php';
     include 'table.php';        ?>
-    <h1 id="header"> Welcome to Boise Flavors contact </h1>
-    </head>
+    <!-- <h1 id="header"> Welcome to Boise Flavors contact </h1>
+    </head> -->
     
 <?php
-    $currentPage="contact";
+    
     require_once 'feeds.php';
     require_once 'nav.php';
 ?>

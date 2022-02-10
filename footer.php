@@ -1,5 +1,9 @@
     
     </body>
-    <footer>whaddup footer</footer>
+    
+    <footer>
+        whaddup footer     
+    </footer>
+            
 </html>
     
