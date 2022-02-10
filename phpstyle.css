@@ -45,7 +45,7 @@ ul > li:hover {
     float: right;
 }
 
-.promotion {
+.promo {
     display: inline-block;
     /* clear:right; */
     margin-left: 50px;
@@ -54,6 +54,16 @@ ul > li:hover {
     width: 300px;
     height: 300px;
     border: solid black 2px;
+    text-align: center;
+}
+
+.promo > textarea {
+    bottom: 0;
+    max-width: fit-content;
+}
+
+input {
+    cursor: pointer;
 }
 
 footer {    

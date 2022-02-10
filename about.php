@@ -33,6 +33,20 @@ whaddup about <br>
     }
 ?>
 
+<form method="post" action="comments.php">
+    <div class="input_box">
+        <label for="first_name">First name:</label>
+        <input type="text" name="first_name">
+        <!-- <input type="submit" value="boom"> -->
+    </div>
+    
+    <div class="input_box">
+        <label for="last_name">Name:</label>
+        <input type="text" name="last_name">
+        <input type="submit" value="Submit u man">
+    </div>
+
+</form>
 
          
 <?php

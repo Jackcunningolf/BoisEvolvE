@@ -12,23 +12,40 @@
     require_once 'nav.php';
 ?>
 
-<div id="1" class="promotion">
+<div id="1" class="promo">
     Come down to boise brewing
 
     <!-- <div class="comment_section">
         This is the comment section
     </div> -->
+    <textarea rows="4" cols="20"> </textarea>
 </div>
 
-<div id="2" class="promotion">
+<div id="2" class="promo">
     Come down to rhodes skatepark
+
+    <form method="post" action="comments.php">
+        <div>
+            <label><input type="checkbox" name="birthday cake">birthday cake</label>
+            <input type="checkbox" name="chocolate chip">chocolate chip 
+            <input type="submit" value="submit">
+        </div>
+    </form>
 </div>
 
-<div id="3" class="promotion">
+<div id="3" class="promo">
     Come down to Boise state
+    
+    <form method="POST" action="comments.php">
+        <input type="radio" name="color" value="blue">blue 
+        <input type="radio" name="color" value="green">green 
+        <input type="radio" name="color" value="red">red 
+        <input type="submit" value="submit">
+        
+    </form>
 </div>
 
-<div id="4" class="promotion">
+<div id="4" class="promo">
     Come down to the grove
 </div>
 
