@@ -24,7 +24,7 @@
 <div id="2" class="promo">
     Come down to rhodes skatepark
 
-    <form method="post" action="comments.php">
+    <form method="post" action="index.php">
         <div>
             <label><input type="checkbox" name="birthday cake">birthday cake</label>
             <input type="checkbox" name="chocolate chip">chocolate chip 
@@ -36,17 +36,25 @@
 <div id="3" class="promo">
     Come down to Boise state
     
-    <form method="POST" action="comments.php">
+    <form method="POST" action="index.php">
         <input type="radio" name="color" value="blue">blue 
         <input type="radio" name="color" value="green">green 
         <input type="radio" name="color" value="red">red 
         <input type="submit" value="submit">
         
     </form>
+
+    <?php $mydir = glob("*.php");   
+     echo "<pre>" . print_r($mydir, 1) . "</pre>"; ?>
+
 </div>
+
+
 
 <div id="4" class="promo">
     Come down to the grove
+    <a href="about.php" id="test">   </a>
+    we're on top of it!
 </div>
 
 <?php

@@ -1,10 +1,7 @@
 <?php
     $currentPage = "about";
     require_once 'header.php';
-    // echo '<h1 id="header"> Welcome to Boise Flavors about </h1>';
-    // echo '</head>';
-
-    
+    include 'table.php';
     require_once 'feeds.php';
     require_once 'nav.php';
 
@@ -48,8 +45,11 @@ whaddup about <br>
 
 </form>
 
+
+
          
 <?php
+    myTable::make_table("data.txt");
     require_once 'footer.php';
 ?>
 

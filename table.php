@@ -8,7 +8,7 @@ class myTable {
         $this->name = $name;
     }
 
-    public static function awesomefunction() {
+    public function awesomefunction() {
         echo 19+20;
     }
 
@@ -19,7 +19,8 @@ class myTable {
             }
 
             $data = file_get_contents($filename);
-            $lines = explode("\n", trim($data));        ?>
+            $lines = explode("\n", trim($data)); 
+            $lines = array_reverse($lines);         ?>
 
             <table>
                 <?php    foreach($lines as $line) {
