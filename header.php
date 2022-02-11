@@ -8,6 +8,6 @@
             echo "<h1 id='header'> Welcome to Boise Flavors contact </h1>";
          } elseif($currentPage == "about") {
             echo "<h1 id='header'> Welcome to Boise Flavors about </h1>";
-        } ?>
-
+         } 
+      ?>
     </head>
