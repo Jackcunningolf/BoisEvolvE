@@ -1,0 +1,12 @@
+#user_header {
+    text-align: center;
+    border-bottom: solid black 2px;
+    padding-bottom: 25px;
+    vertical-align: middle;
+    position: relative;
+}
+
+#user_hello {
+    position: relative;
+    top: 15px;
+}
