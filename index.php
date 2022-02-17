@@ -55,10 +55,10 @@ require_once 'nav.php'; ?>
 </div>
 
 <?php
-$bPromo = new promo("hello there");
+// $bPromo = new promo("hello there");
 // $bPromo->getPromoName();
 
-for ($i = 0; $i < 10; $i++) {
+for ($i = 0; $i < 8; $i++) {
     new promo($i);
 }
 
