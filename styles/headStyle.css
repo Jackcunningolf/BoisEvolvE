@@ -1,0 +1,48 @@
+.header {
+    text-align: center;
+    border-bottom: solid black 2px;
+    padding-bottom: 45px;
+    background-color: rgb(136, 188, 204);
+    height: 50px;
+}
+
+#userprofile {
+    position: relative;
+    float: right;
+    border: solid black 1px;
+    padding: 5px;
+    color: black;
+    top: 20px;
+    margin-right: 25px;
+}
+
+
+#circ {
+    position: relative;
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+    border: solid black 1px;
+    float: left;   
+    margin-left: 10px;
+    top: 10px;
+}
+
+
+[src|="images/BlobGuy.png"] {
+    position: relative;
+    top: 7px;
+    left: 3px;
+}
+
+.header_item {
+    background-color: rgb(228, 199, 199);
+}
+.header_item:hover {
+    background-color: rgb(223, 185, 185);
+}
+
+#head_hello {
+    position: relative;
+    top: 20px;
+}

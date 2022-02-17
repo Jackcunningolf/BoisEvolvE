@@ -2,57 +2,13 @@
 <html>
 
 <head>
-       <link rel="stylesheet" href="phpstyle.css">
+       <title>Boise Flavors</title>
+       <link rel="icon" type="image/x-icon" href="images/tball.png">
+       <link rel="stylesheet" href="styles/phpstyle.css">
+       <link rel="stylesheet" href="styles/headStyle.css">
 
-       <?php if ($currentPage  == "index") { ?>
-
-              <h1 class='header'>
-                     <a href="index.php">
-                            <div id="circ">
-                                   <img src="images/BlobGuy.png" alt="Shmeareian">
-                            </div>
-                     </a>
-
-                     Welcome to Boise Flavors home
-                     <a href="user_profile.php">
-                            <div id="userprofile"> User Profile </div>
-                     </a>
-              </h1>
-
-       <?php } elseif ($currentPage == "contact") { ?>
-              <h1 class='header'>
-                     <a href="index.php">
-                            <div id="circ">
-                                   <img src="images/BlobGuy.png" alt="Shmeareian">
-                            </div>
-                     </a>
-                     Welcome to Boise Flavors contact
-                     <a href="user_profile.php">
-                            <div id="userprofile"> User Profile </div>
-                     </a>
-              </h1>
-       <?php } elseif ($currentPage == "about") {  ?>
-
-
-              <h1 class='header'>
-                     <a href="index.php">
-                            <div id="circ">
-                                   <img src="images/BlobGuy.png" alt="Shmeareian">
-                            </div>
-                     </a>
-                     Welcome to Boise Flavors about
-
-                     <a href="user_profile.php">
-                            <div id="userprofile"> User Profile </div>
-                     </a>
-              </h1>
-
-       <?php } else {
+      <?php
               promo::createHeader();
-       }
-
-
-
 
        ?>
 

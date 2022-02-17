@@ -1,14 +1,10 @@
 body {
-    margin-bottom: 0;
+    margin: 0;
+    background-color: #a4a4a4;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.header {
-    text-align: center;
-    border-bottom: solid black 2px;
-    padding-bottom: 45px;
-    vertical-align: middle;
-    position: relative;
-}
+
 
 #navigate {
     text-align: center;
@@ -41,40 +37,18 @@ ul > li:hover {
     border: solid black 1px;
     /* margin-right: 20px; */
     margin-bottom: 300px;
+    background-color: white;
 }
 
 #leftfeed {
     float: left; 
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #rightfeed {
     float: right;
-}
-
-#userprofile {
-    float: right;
-    width: auto;
-    border: solid black 1px;
-    padding: 5px;
-    color: black;
-}
-
-#circ {
-    height: 75px;
-    width: 75px;
-    border-radius: 80%;
-    border: solid black 1px;
-    float: left;   
-}
-
-[src|="images/BlobGuy.png"] {
-    position: relative;
-    top: 7px;
-    left: 3px;
-}
-
-#circ:hover {
-    background-color: #d1d1d1;
+    margin-right: 10px;
 }
 
 .promo {
@@ -86,6 +60,7 @@ ul > li:hover {
     height: 250px;
     border: solid black 2px;
     text-align: center;
+    background-color: bisque;
 }
 
 .promo:hover {
