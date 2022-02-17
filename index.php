@@ -1,20 +1,23 @@
 <?php
-    $currentPage = "index";
-    require_once 'header.php';  
-     ?>
-    <!-- <h1 id="header"> Welcome to Boise Flavors home </h1> -->
-    <!-- </head> -->
+$currentPage = "index";
+require_once 'header.php';
+require_once 'promos.php';
+?>
+<!-- <h1 id="header"> Welcome to Boise Flavors home </h1> -->
+<!-- </head> -->
 
 
-<?php require_once 'feeds.php'; 
-require_once 'nav.php';?>
+<?php require_once 'feeds.php';
+require_once 'nav.php'; ?>
+
 
 <div id="1" class="promo">
-    Come down to boise brewing
-    <!-- <textarea rows="4" cols="20"> </textarea> -->
-    <?php print $_SERVER["SERVER_NAME"]; ?>
-    <!-- <iframe width="355" height="440" src="http://us.napster.com/embedded-player/?g=6044988D0F07B0D2E043C0A87FE4B0D2&ocode=social_user&pcode=social_user&cpath=Embed&rsrc=artist#/artists/art.10482910"></iframe> -->
+    Come down to boise brewing here:
+    <a href="individual_post.php">
+        <span id="promo_link">Welcome!</span>
+    </a>
 </div>
+
 
 
 
@@ -39,16 +42,29 @@ require_once 'nav.php';?>
 
     <form method="POST" action="index.php">
         <!-- <input type="radio" name="color" value="blue">blue  -->
-        <input type="radio" name="color" value="green"> green 
-        <input type="radio" name="color" value="red"> red 
-        <input type="submit" value="submit"> 
+        <input type="radio" name="color" value="green"> green
+        <input type="radio" name="color" value="red"> red
+        <input type="submit" value="submit">
     </form>
-   
-    
-    <?php $mydir = glob("*.php");   
-    // echo "<pre>" . print_r($mydir, 1) . "</pre>"; ?>
+
+
+    <?php $mydir = glob("*.php");
+    // echo "<pre>" . print_r($mydir, 1) . "</pre>"; 
+    ?>
 
 </div>
+
+<?php
+$bPromo = new promo("hello there");
+// $bPromo->getPromoName();
+
+for ($i = 0; $i < 10; $i++) {
+    new promo($i);
+}
+
+new promo();
+?>
+
 
 
 
@@ -59,8 +75,5 @@ require_once 'nav.php';?>
 </div> -->
 
 <?php
-    require_once 'footer.php';
+require_once 'footer.php';
 ?>
-
-
-

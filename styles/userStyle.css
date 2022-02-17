@@ -10,3 +10,12 @@
     position: relative;
     top: 15px;
 }
+
+#user_bio {
+    margin-top: 10px;
+    text-align: center;
+    /* width: 900px;
+    height: 300px; */
+    border: solid black 1px;
+    float:right;
+}
