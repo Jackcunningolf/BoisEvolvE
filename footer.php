@@ -2,7 +2,7 @@
     <!-- </body> -->
     
     <footer>
-        whaddup footer     
+        footer     
     </footer>
             
 </html>
