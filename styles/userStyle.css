@@ -12,10 +12,13 @@
 }
 
 #user_bio {
+    background-color: rgb(171, 192, 192);
     margin-top: 10px;
     text-align: center;
-    /* width: 900px;
-    height: 300px; */
+    width: 70%;
+    height: 300px;
     border: solid black 1px;
-    float:right;
+    margin-right: 15px;
+    float: right;
+    margin-bottom: 20px;
 }

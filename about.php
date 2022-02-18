@@ -45,9 +45,8 @@ whaddup about <br>
 
 </form>
 
-
-
-         
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ab, saepe nulla voluptas incidunt temporibus voluptatibus minus perspiciatis tenetur assumenda ex, dolores totam ducimus doloremque. Dolorem nisi molestiae repudiandae esse.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, porro autem dignissimos blanditiis corrupti beatae omnis excepturi saepe labore laboriosam corporis fugiat unde tempora ullam. Consequuntur aperiam ipsum sint necessitatibus.</p>         
 <?php
     myTable::make_table("data.txt");
     require_once 'footer.php';
