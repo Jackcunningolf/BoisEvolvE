@@ -1,9 +1,12 @@
 <?php
     $currentPage = "about";
     require_once 'header.php';
-    include 'table.php';
+    require_once 'table.php';
     require_once 'feeds.php';
     require_once 'nav.php';
+
+    // require_once 'Dao.php';
+    // $dao = new Dao();
 
     $majors = array();
     $majors[] = "computer science";
@@ -34,13 +37,12 @@ whaddup about <br>
     <div class="input_box">
         <label for="first_name">First name:</label>
         <input type="text" name="first_name">
-        <!-- <input type="submit" value="boom"> -->
     </div>
     
     <div class="input_box">
-        <label for="last_name">Name:</label>
+        <label for="last_name">Last name:</label>
         <input type="text" name="last_name">
-        <input type="submit" value="Submit u man">
+        <input type="submit" value="Submit name">
     </div>
 
 </form>
