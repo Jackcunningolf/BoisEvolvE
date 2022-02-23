@@ -20,4 +20,7 @@ require_once 'promos.php';
         $j = $i+1;
         new promo("User post: " . $j);
     }
-    ?>
+?>
+
+
+<a href="new_user.php"><br> Make new user</a>
