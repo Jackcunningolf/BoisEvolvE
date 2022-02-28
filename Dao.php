@@ -1,9 +1,9 @@
 <?php
 
 class Dao {
-    private $dsn = "mysql:host=localhost;dbname=boise_flavors;";
-    private $db_user = "jack";
-    private $pass = "Sql_werety<3";
+    private $dsn = "mysql:host=us-cdbr-east-05.cleardb.net;dbname=heroku_8c0ea42fadc68d8;";
+    private $db_user = "be8cd46d258529";
+    private $pass = "9e4f054e";
 
     public function getConnection () {
         return new PDO($this->dsn, 

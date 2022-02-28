@@ -21,8 +21,16 @@ require_once 'nav.php';
         </div>
     </form> 
 </div> -->
-<?php 
-new promo("Come down to boise brewing");
+
+<a href="new_user.php">
+    <?php new promo("Come down to boise brewing");    ?>
+</a>
+
+
+
+
+
+<?php
 new promo("Come down to rhodes skatepark");
 new promo("Come down to Boise state"); 
 
