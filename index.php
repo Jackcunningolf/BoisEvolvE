@@ -30,7 +30,7 @@ require_once 'nav.php';
 
 
 
-<?php
+<?php phpinfo();
 new promo("Come down to rhodes skatepark");
 new promo("Come down to Boise state"); 
 
