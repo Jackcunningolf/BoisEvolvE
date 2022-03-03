@@ -68,6 +68,7 @@ whaddup about <br>
             }
     // print_r($db_contents, 1);
 ?>
+        </table>
 
 
 

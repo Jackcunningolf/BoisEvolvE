@@ -1,0 +1,58 @@
+grabbing connection...
+grabbing connection...
+grabbing connection...
+grabbing connection...
+grabbing connection...
+grabbing connection...
+grabbing connection...
+created new user...  jack created new user...  jack` cunninghamcreated new user...  jack cunningham
+deleting user...
+created new user...  jack cunningham
+created new user...  izzy olson
+deleting user...
+created new user...  Jack Cunningham
+created new user...  izzy olson
+created new user...  Jack Cunningham
+created new user...  izzy Cunningham
+created new user...  Jack Cunningham
+created new user...  Jack Cunningham
+deleting user...
+deleting user...
+created new user...  Jack Cunningham
+created new user...  izzy database
+created new user...  <h1>hello</h1> 
+created new user...  &lt;h1&gt;hello&lt;/h1&gt; 
+created new user...  DELETE FROM promoter where id = 64; 
+deleting user...
+2022-03-02 20:57:07created new user --> Jack Cunningham
+2022-03-02 20:57:41 deleting user...
+2022-03-02 20:57:44 deleting user...
+2022-03-02 20:58:32 ...deleted user id : 74
+2022-03-02 20:59:37 | User deleted --> id : 4
+2022-03-02 20:59:49 | Created new user --> Jack Cunningham
+2022-03-02 21:00:48 | Created new user --> 654321 
+invalid name format2022-03-02 21:10:57 | User deleted --> id : 114
+2022-03-02 21:11:03 | Created new user --> 6541 
+2022-03-02 21:11:17 | Created new user --> Jack Cunningham
+2022-03-02 21:13:09 | User deleted --> id : 124
+2022-03-02 21:13:13 | Created new user --> Jack Cunningham
+2022-03-02 21:13:17 | User deleted --> id : 14
+2022-03-02 21:13:28 | Created new user --> 6543 
+2022-03-02 21:14:01 | User deleted --> id : 154
+2022-03-02 21:14:13 | Created new user --> 1654 
+2022-03-02 21:14:23 | User deleted --> id : 164
+invalid name format2022-03-02 21:16:07 | User deleted --> id : 44
+2022-03-02 21:16:14 | Created new user --> 654 
+2022-03-02 22:40:49 | User deleted --> id : 174
+Invalid name format2022-03-02 22:41:22 | Created new user --> izzy olson
+2022-03-02 22:41:30 | Created new user --> 6543 
+2022-03-02 22:41:34 | User deleted --> id : 194
+Invalid name format
+2022-03-02 22:42:35 | Created new user --> Jack Cunningham
+Invalid name format
+Invalid name format
+Invalid name format
+Invalid name format
+2022-03-02 22:43:35 | User deleted --> id : 204
+2022-03-02 23:09:07 | User deleted --> id : 144
+2022-03-02 23:36:37 | User deleted --> id : 134

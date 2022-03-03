@@ -6,31 +6,15 @@ require_once 'feeds.php';
 require_once 'nav.php'; 
 ?>
 
-
-<!-- <div id="2" class="promo">
-    Come down to rhodes skatepark
-     <a href="contact.php">
-        Click here to go to contact
-    </a> -->
-
-    <!-- <form method="post" action="index.php">
-        <div>
-            <label><input type="checkbox" name="birthday cake">birthday cake</label>
-            <input type="checkbox" name="chocolate chip">chocolate chip 
-            <input type="submit" value="submit">
-        </div>
-    </form> 
-</div> -->
-
-<a href="new_user.php">
-    <?php new promo("Come down to boise brewing");    ?>
-</a>
+<div>
+    <a href="new_user.php">
+        <?php new promo("Come down to boise brewing");    ?>
+    </a>
+</div>
 
 
 
-
-
-<?php phpinfo();
+<?php 
 new promo("Come down to rhodes skatepark");
 new promo("Come down to Boise state"); 
 
