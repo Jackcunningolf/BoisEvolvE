@@ -1,6 +1,6 @@
 <?php
 require_once '../Dao.php';
-require_once '../KLogger.php';
+session_start();
 $dao = new Dao();
 
 ini_set('display_errors', 1);
@@ -13,9 +13,11 @@ ini_set('display_errors', 1);
 $fname = htmlspecialchars($_POST['first_name']);
 $lname = $_POST['last_name'];
 $fullname = $fname . " " . $lname;
+
 $reg_pattern = "/\w+\s\w+/";
 if (!preg_match($reg_pattern, $fullname)) {
     file_put_contents("../log.txt", "Invalid name format submitted\n", FILE_APPEND);
+    $_SESSION['message'][] = "Invalid name format submitted";
     header('location: ../about.php');
     exit;
 }
