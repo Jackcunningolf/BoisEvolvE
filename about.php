@@ -13,6 +13,7 @@ $dao = new Dao();
 // require_once 'Dao.php';
 // $dao = new Dao();
 
+
 $majors = array();
 $majors[] = "computer science";
 for ($i = 1; $i < 5; $i++) {
@@ -23,6 +24,7 @@ for ($i = 1; $i < 5; $i++) {
 
 whaddup about <br>
 
+<a href="#myfooter">move to bottom of page</a>
 
 <?php
 echo "<pre>" . print_r($majors, 1) . "</pre>";

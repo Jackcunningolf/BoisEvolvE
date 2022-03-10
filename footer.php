@@ -1,7 +1,7 @@
         
     <!-- </body> -->
     
-    <footer>
+    <footer id="myfooter">
         footer     
     </footer>
             
