@@ -10,7 +10,7 @@ $lname = $_POST['last_name'];
 $nick = $_POST['nickname'];
 $email = $_POST['email'];
 
-$dao->createNewUser($nick, $fname, $lname, $email, $pass);
+$dao->createNewUser($fname, $lname, $nick, $email, $pass);
 
 header('location: user_profile.php');
 exit;

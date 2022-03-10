@@ -7,4 +7,3 @@ ini_set('display_errors', 1);
 $dao->deleteUser($_GET['id']);
 header('location: ../about.php');
 exit;
-echo "hi";

@@ -5,7 +5,7 @@ class utils {
 
     public static function createHeader() { ?>
         <h1 class='header'>
-                 <a href="index.php">
+                 <a href="home.php">
                         <div id="circ" class="header_item">
                                <img src="images/BlobGuy.png" alt="Shmeareian">
                         </div>

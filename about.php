@@ -54,13 +54,13 @@ for ($i = 0; $i < 5; $i++) {
 </form>
 
 <?php
- if (count($_SESSION['message']) > 0) {
+if (count($_SESSION['message']) > 0) {
     echo "<pre>" .  print_r($_SESSION['message'], 1) . "</pre>";
 
     if (isset($_SESSION['message'])) {
         unset($_SESSION['message']);
     }
-  }
+}
 
 
 $db_contents = $dao->getUsers(); ?>

@@ -78,5 +78,24 @@ class Dao {
         $q->execute();
     }
 
+    public function checkUserExists($nick, $pass) {
+        
+
+        // file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | Checking if user exists --> nick : {$nick}\n", FILE_APPEND);
+        
+        try {
+            $connect = $this->getConnection();
+            $saveQ = "SELECT * FROM promoter WHERE nickname = :nickname AND pass = :pass";
+            $q = $connect->prepare($saveQ);
+            $q->bindParam(":nickname", $nick);
+            $q->bindParam(":pass", $pass);
+            return $q->execute();
+        } catch (Exception $e) {
+            $this->logger->LogFatal($e->getMessage());
+            //echo $e->getMessage();
+            exit;
+        }
+    }
+
     // have function that checks whether a certain field is in the database or not
 }

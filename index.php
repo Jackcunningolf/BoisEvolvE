@@ -1,28 +1,28 @@
+<?php session_start(); ?>
+
+<h1>Log in</h1>
+<form method="post" action="handlers/login.php">
+    <div class="input_box">
+        <label for="nickname"> Nickname : </label>
+        <input type="text" name="nickname">
+    </div>
+
+    <div class="input_box">
+        <label for="password"> Password  : </label>
+        <input type="text" name="password">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+
+New here? <a href="new_user.php">Create new account</a>
+
 <?php
-$currentPage = "index";
-require_once 'header.php';
-require_once 'promos.php';
-require_once 'feeds.php';
-require_once 'nav.php'; 
-?>
+if (count($_SESSION['message']) > 0) {
+    echo "<pre>" .  print_r($_SESSION['message'], 1) . "</pre>";
 
-<div>
-    <a href="new_user.php">
-        <?php new promo("Come down to boise brewing");    ?>
-    </a>
-</div>
-
-
-
-<?php 
-new promo("Come down to rhodes skatepark");
-new promo("Come down to Boise state"); 
-
-for ($i = 0; $i < 8; $i++) {
-    new promo($i);
+    if (isset($_SESSION['message'])) {
+        unset($_SESSION['message']);
+    }
 }
-
-new promo();
-
-require_once 'footer.php';
 ?>

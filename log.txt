@@ -56,3 +56,22 @@ Invalid name format
 2022-03-02 22:43:35 | User deleted --> id : 204
 2022-03-02 23:09:07 | User deleted --> id : 144
 2022-03-02 23:36:37 | User deleted --> id : 134
+2022-03-09 21:14:26 | Created new user --> izzy database
+Invalid first name submitted
+2022-03-09 21:22:18 | Created new user --> izzy hello 
+First or last name can't be empty
+First or last name can't be empty
+First or last name can't be empty
+Invalid name format submitted
+Invalid first name submitted
+2022-03-09 21:25:17 | Created new user --> samwell 653
+First or last name can't be empty
+Invalid name submitted
+Invalid name format submitted
+Invalid name submitted
+Invalid name format submitted
+Invalid name submitted
+2022-03-09 21:27:33 | User deleted --> id : 294
+2022-03-09 21:27:36 | User deleted --> id : 284
+2022-03-09 21:46:20 | User deleted --> id : 314
+2022-03-09 21:46:23 | User deleted --> id : 304

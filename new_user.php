@@ -1,4 +1,5 @@
-<form method="post" action="user_handler.php">
+<h1>Create new account</h1>
+<form method="post" action="handlers/login.php">
     <div class="input_box">
         <label for="first_name"> First name:</label>
         <input type="text" name="first_name">

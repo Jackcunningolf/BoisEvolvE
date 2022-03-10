@@ -1,8 +1,8 @@
 <body>
     <div id="navigate">
         <ul>
-            <li <?php if ($currentPage == "index") { echo 'class="currPage"'; } ?>>
-                <a href="index.php"> 
+            <li <?php if ($currentPage == "home") { echo 'class="currPage"'; } ?>>
+                <a href="home.php"> 
                     home 
                 </a>
             </li>
