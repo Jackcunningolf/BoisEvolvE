@@ -5,9 +5,12 @@ require_once 'header.php';
 require_once 'promos.php';
 require_once 'feeds.php';
 require_once 'nav.php'; 
+
 if (isset($_SESSION['username'])) {
     echo "Welcome " . $_SESSION['username'];
 }
+
+// unset($_SESSION['username']);
 ?>
 
 

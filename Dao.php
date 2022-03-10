@@ -85,11 +85,11 @@ class Dao {
         
         try {
             $connect = $this->getConnection();
-            $saveQ = "SELECT * FROM promoter WHERE nickname = :nickname AND pass = :pass";
+            $saveQ = "SELECT * FROM promoter WHERE nickname=:nickname AND pass=:pass";
             $q = $connect->prepare($saveQ);
-            $q->bindParam(":nickname", $nick);
-            $q->bindParam(":pass", $pass);
-            return $q->execute();
+            $q->execute(['nickname' => $nick, 'pass' => $pass]);
+            $user = $q->fetch();
+            return $user;
         } catch (Exception $e) {
             $this->logger->LogFatal($e->getMessage());
             //echo $e->getMessage();

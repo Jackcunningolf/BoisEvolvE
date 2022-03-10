@@ -1,6 +1,6 @@
 <?php
-require_once '../Dao.php';
 session_start();
+require_once '../Dao.php';
 $dao = new Dao();
 
 ini_set('display_errors', 1);

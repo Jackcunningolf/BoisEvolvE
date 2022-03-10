@@ -8,18 +8,16 @@ $pass = $_POST['password'];
 
 $user = $dao->checkUserExists($nick, $pass);
 
-if ($user == null or !isset($user)) {
-    file_put_contents("../log.txt", "First or last name can't be empty\n", FILE_APPEND);
-    $_SESSION['message'][] = "User not found";
-}
+// echo $user['nickname'] . "\n";
+// echo $user['pass'];
 
-if (count($_SESSION) > 0 ) {
+if (!isset($user['nickname']) ) {
+    file_put_contents("../log.txt", "User could not be found\n", FILE_APPEND);
+    $_SESSION['message'][] = "User not found";
     header('location: ../index.php');
     exit;
+} else {
+  $_SESSION['username'] = $nick;
+    header('location: ../home.php');
+    exit;
 }
-
-$_SESSION['username'] = $nick;
-
-$_SESSION['message'][] = "User found";
-header('location: ../index.php');
-exit;
