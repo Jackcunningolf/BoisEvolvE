@@ -61,7 +61,7 @@ class Dao {
         $q->bindParam(":email", $email);
         $q->bindParam(":pass", $pass);
         $q->execute();
-        file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | Created new user --> " . $f_name . " " . $l_name . "\n", FILE_APPEND);
+     //   file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | Created new user --> " . $f_name . " " . $l_name . "\n", FILE_APPEND);
 
     }
 

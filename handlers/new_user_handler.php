@@ -12,6 +12,6 @@ $pass = htmlspecialchars($_POST['password']);
 $dao->createNewUser($fname, $lname, $nick, $email, $pass);
 
 $_SESSION['message'][] = "User created. Try logging in!";
-$_SESSION['username'][] = $nick;
+$_SESSION['username'] = $nick;
 header('location:../index.php');
 exit;
