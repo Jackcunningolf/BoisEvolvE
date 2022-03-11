@@ -8,9 +8,6 @@ class Dao {
     private $logger = null;
     private $current_time;
 
-    // public function __construct() {
-    //     $this->logger = new KLogger( "log.txt" , KLogger::WARN);
-    // }
 
     public function getConnection () {
        // file_put_contents("log.txt", "grabbing connection...\n", FILE_APPEND);
@@ -43,8 +40,7 @@ class Dao {
             $connect = $this->getConnection();
             return $connect->query("SELECT * FROM promoter");
         } catch (Exception $e) {
-            $this->logger->LogFatal($e->getMessage());
-            //echo $e->getMessage();
+            file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
             exit;
         }
         
@@ -85,13 +81,14 @@ class Dao {
         
         try {
             $connect = $this->getConnection();
+            file_put_contents("log.txt", "checking if " . $nick . " exists...", FILE_APPEND);
             $saveQ = "SELECT * FROM promoter WHERE nickname=:nickname AND pass=:pass";
             $q = $connect->prepare($saveQ);
             $q->execute(['nickname' => $nick, 'pass' => $pass]);
             $user = $q->fetch();
             return $user;
         } catch (Exception $e) {
-            $this->logger->LogFatal($e->getMessage());
+            file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
             //echo $e->getMessage();
             exit;
         }

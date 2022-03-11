@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+session_regenerate_id(true);
+?>
 
 <h1>Log in</h1>
 <form method="post" action="handlers/login.php">

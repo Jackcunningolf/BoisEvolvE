@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'header.php';
 require_once 'promos.php';
 ?>
@@ -10,9 +11,10 @@ require_once 'promos.php';
     This is the feed on the left side
 </div>
 
+<a href="handlers/logout_handler.php">Log out</a>
 
 <div id="user_bio">
-    User bio
+  <?php echo $_SESSION['username'] . "'s bio"; ?>
 </div>
 
 <?php
