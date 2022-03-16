@@ -7,12 +7,12 @@ session_regenerate_id(true);
 <form method="post" action="handlers/login.php">
     <div class="input_box">
         <label for="nickname"> Nickname : </label>
-        <input type="text" name="nickname">
+        <input type="text" name="nickname" placeholder="type name">
     </div>
 
     <div class="input_box">
         <label for="password"> Password  : </label>
-        <input type="text" name="password">
+        <input type="password" name="password">
         <input type="submit" value="Submit">
     </div>
 </form>

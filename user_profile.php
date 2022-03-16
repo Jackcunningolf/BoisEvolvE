@@ -13,6 +13,8 @@ require_once 'promos.php';
 
 <a href="handlers/logout_handler.php">Log out</a>
 
+Make a <a href="handlers/promo_maker.php">new</a> promo
+
 <div id="user_bio">
   <?php echo $_SESSION['username'] . "'s bio"; ?>
 </div>

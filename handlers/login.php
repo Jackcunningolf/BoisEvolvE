@@ -6,6 +6,8 @@ $dao = new Dao();
 $nick = $_POST['nickname'];
 $pass = $_POST['password'];
 
+$_SESSION['post_data'] = $_POST;
+
 $user = $dao->checkUserExists($nick, $pass);
 
 // echo $user['nickname'] . "\n";

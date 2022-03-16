@@ -128,3 +128,8 @@ table > tr, td:hover {
     height: 10px;
     border: solid black 1px;
 }
+
+div > textarea {
+    resize: none;
+    /* overflow: scroll; */
+}
