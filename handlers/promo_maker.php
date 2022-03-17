@@ -17,7 +17,7 @@
 
     <div class="input_box">
         <label for="promo_description">Description</label>
-        <textarea name="description" cols="30" rows="10"></textarea>
+        <textarea name="promo_description" cols="30" rows="10"></textarea>
     </div>
 
     <div class="input_box">

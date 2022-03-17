@@ -94,5 +94,21 @@ class Dao {
         }
     }
 
+    public function addPromotion($nick, $type, $title, $desc, $text) {
+    
+        $connect = $this->getConnection();
+
+        $saveQ = "INSERT INTO promotion (nickname, promo_type, title, promo_description, promo_text)
+        VALUES (:nickname, :promo_type, :title, :promo_description, :promo_text)";
+
+        $q = $connect->prepare($saveQ);
+        $q->bindParam(":nickname", $nick);
+        $q->bindParam(":promo_type", $type);
+        $q->bindParam(":title", $title);
+        $q->bindParam(":promo_description", $desc);
+        $q->bindParam(":promo_text", $text);
+        $q->execute();
+    }
+
     // have function that checks whether a certain field is in the database or not
 }

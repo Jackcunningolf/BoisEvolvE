@@ -57,7 +57,7 @@ ul > li:hover {
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 50px;
-    width: 55%;
+    width:45%;
     height: 250px;
     border: solid black 2px;
     text-align: center;
@@ -132,4 +132,8 @@ table > tr, td:hover {
 div > textarea {
     resize: none;
     /* overflow: scroll; */
+}
+
+#promo_feed {
+    border: solid black 1px;
 }
