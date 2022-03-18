@@ -61,8 +61,6 @@ class Dao {
         $q->bindParam(":email", $email);
         $q->bindParam(":pass", $pass);
         $q->execute();
-     //   file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | Created new user --> " . $f_name . " " . $l_name . "\n", FILE_APPEND);
-
     }
 
     public function deleteUser($id) {
@@ -108,6 +106,16 @@ class Dao {
         $q->bindParam(":promo_description", $desc);
         $q->bindParam(":promo_text", $text);
         $q->execute();
+    }
+
+    public function getPromotions() {
+        try {
+            $connect = $this->getConnection();
+            return $connect->query("SELECT * FROM promotion");
+        } catch (Exception $e) {
+            file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
+            exit;
+        }
     }
 
     // have function that checks whether a certain field is in the database or not
