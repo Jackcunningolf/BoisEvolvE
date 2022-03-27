@@ -10,15 +10,13 @@ require_once 'Dao.php';
 require_once 'KLogger.php';
 $dao = new Dao();
 
-// require_once 'Dao.php';
-// $dao = new Dao();
 
 
-$majors = array();
-$majors[] = "computer science";
-for ($i = 1; $i < 5; $i++) {
-    $majors[] = $i . 8;
-}
+// $majors = array();
+// $majors[] = "computer science";
+// for ($i = 1; $i < 5; $i++) {
+//     $majors[] = $i . 8;
+// }
 
 ?>
 

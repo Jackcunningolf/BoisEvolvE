@@ -9,13 +9,14 @@ require_once 'Dao.php';
 $dao = new Dao();
 
 if (isset($_SESSION['username'])) {
-    echo "Welcome " . $_SESSION['username'];
+    echo "Welcome " . $_SESSION['username'] . "!";
 }
 
-// unset($_SESSION['username']);
-$promotions = $dao->getPromotions();
-
 ?>
+
+Make a <a href="handlers/promo_maker.php">new</a> promo
+
+<?php $promotions = $dao->getPromotions(); ?>
 
 <div id="promo_feed">
     <?php 

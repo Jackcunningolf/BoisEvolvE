@@ -2,6 +2,8 @@
 session_start();
 require_once 'header.php';
 require_once 'promos.php';
+require_once 'Dao.php';
+$dao = new Dao();
 ?>
 
 <link rel="stylesheet" href="styles/phpStyle.css">
@@ -13,18 +15,18 @@ require_once 'promos.php';
 
 <a href="handlers/logout_handler.php">Log out</a>
 
-Make a <a href="handlers/promo_maker.php">new</a> promo
-
 <div id="user_bio">
   <?php echo $_SESSION['username'] . "'s bio"; ?>
 </div>
 
-<?php
-    for ($i = 0; $i < 8; $i++) {
-        $j = $i+1;
-        new promo("User post: " . $j);
-    }
-?>
+<?php $promotions = $dao->getUserPromotions($_SESSION['username']); ?>
 
+<div id="promo_feed">
+    <?php 
+        foreach ($promotions as $promotion) {
+            new promo($promotion['nickname'], $promotion['title'], $promotion['promo_description'], $promotion['promo_text']);
+        } 
+    ?>
 
-<a href="new_user.php"><br> Make new user</a>
+</div>
+

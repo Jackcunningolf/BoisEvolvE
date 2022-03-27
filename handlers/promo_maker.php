@@ -1,7 +1,7 @@
 <h1>New Post</h1>
 <link rel="stylesheet" href="../styles/phpstyle.css">
 <!-- enctype="multipart/form-data" -->
-<form method="post" action="promo_handler.php" >
+<form method="post" action="promo_handler.php" enctype="multipart/form-data">
     <div class="input_box">
         <label for="title">Title name:</label>
         <input type="text" name="title">

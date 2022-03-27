@@ -65,7 +65,7 @@ class Dao {
 
     public function deleteUser($id) {
         $connect = $this->getConnection();
-        file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | User deleted --> id : {$id}\n", FILE_APPEND);
+        // file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | User deleted --> id : {$id}\n", FILE_APPEND);
         $saveQ = "DELETE FROM promoter WHERE id = :id";
         $q = $connect->prepare($saveQ);
         $q->bindParam(":id", $id);
@@ -116,6 +116,23 @@ class Dao {
             file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
             exit;
         }
+    }
+
+    public function getUserPromotions($nick) {
+        try {
+            $connect = $this->getConnection();
+            $saveQ = "SELECT * FROM promotion WHERE nickname = :nickname";
+            $q = $connect->prepare($saveQ);
+            $q->bindParam(":nickname", $nick);
+            $q->execute();
+            $userpromos = $q->fetchAll();
+            return $userpromos;
+        // return $connect->query("SELECT * FROM promotion WHERE nickname = '$nick'");
+        } catch (Exception $e) {
+            file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
+            exit;
+        }
+        
     }
 
     // have function that checks whether a certain field is in the database or not
