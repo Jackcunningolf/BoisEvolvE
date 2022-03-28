@@ -23,6 +23,13 @@
     <div class="input_box">
         <label for="password"> Password : </label>
         <input type="text" name="password">
+        
+    </div>
+
+    <div class="input_box">
+        <label for="bio"> Bio : </label>
+        <textarea name="bio" cols="100" rows="30"></textarea>
         <input type="submit" value="Submit">
     </div>
+
 </form>

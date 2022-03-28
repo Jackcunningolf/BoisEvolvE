@@ -46,13 +46,13 @@ class Dao {
         
     }
 
-    public function createNewUser ($f_name, $l_name, $nick, $email, $pass) {
+    public function createNewUser ($f_name, $l_name, $nick, $email, $pass, $bio) {
         $connect = $this->getConnection();
 
         // $this->logger->LogInfo("created new user");
         
-        $saveQ = "INSERT INTO promoter (first_name, last_name, nickname, email, pass)
-        VALUES (:first_name, :last_name, :nickname, :email, :pass)";
+        $saveQ = "INSERT INTO promoter (first_name, last_name, nickname, email, pass, bio)
+        VALUES (:first_name, :last_name, :nickname, :email, :pass, :bio)";
 
         $q = $connect->prepare($saveQ);
         $q->bindParam(":first_name", $f_name);
@@ -60,6 +60,7 @@ class Dao {
         $q->bindParam(":nickname", $nick);
         $q->bindParam(":email", $email);
         $q->bindParam(":pass", $pass);
+        $q->bindParam(":bio", $bio);
         $q->execute();
     }
 
@@ -132,7 +133,22 @@ class Dao {
             file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
             exit;
         }
-        
+    }
+
+    public function getUserBio($nick) {
+        try {
+            $connect = $this->getConnection();
+            $saveQ = "SELECT bio FROM promoter WHERE nickname = :nickname";
+            $q = $connect->prepare($saveQ);
+            $q->bindParam(":nickname", $nick);
+            $q->execute();
+            $userbio = $q->fetch();
+            return $userbio;
+        // return $connect->query("SELECT * FROM promotion WHERE nickname = '$nick'");
+        } catch (Exception $e) {
+            file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
+            exit;
+        }
     }
 
     // have function that checks whether a certain field is in the database or not

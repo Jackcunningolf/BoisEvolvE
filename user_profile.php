@@ -16,7 +16,11 @@ $dao = new Dao();
 <a href="handlers/logout_handler.php">Log out</a>
 
 <div id="user_bio">
-  <?php echo $_SESSION['username'] . "'s bio"; ?>
+  <?php 
+    echo $_SESSION['username'] . "'s bio" . "<br>"; 
+    $bio = $dao->getUserBio($_SESSION['username']);
+    echo $bio['bio'];
+  ?>
 </div>
 
 <?php $promotions = $dao->getUserPromotions($_SESSION['username']); ?>
