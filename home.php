@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    header('location: index.php');
+    exit;
+  }
+  
 $currentPage = "home";
 require_once 'header.php';
 require_once 'promos.php';

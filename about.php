@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['username'])) {
+    header('location: index.php');
+    exit;
+}
 
 $currentPage = "about";
 require_once 'header.php';

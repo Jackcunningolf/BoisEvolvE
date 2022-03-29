@@ -1,13 +1,19 @@
 <?php
-    $currentPage="contact";
-    require_once 'header.php';
-    include 'table.php';        ?>
-    <!-- </head> -->
-    
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('location: index.php');
+    exit;
+}
+
+$currentPage = "contact";
+require_once 'header.php';
+include 'table.php';        
+?>
+
 <?php
-    
-    require_once 'feeds.php';
-    require_once 'nav.php';
+
+require_once 'feeds.php';
+require_once 'nav.php';
 ?>
 whaddup contact
 
@@ -34,31 +40,31 @@ whaddup contact
 
 
 <?php
-    for ($heads = 1; $heads <= 6; $heads++) {
-        echo "<h{$heads}>" . "goodbye world" . "</h{$heads}>";
-    }    
+for ($heads = 1; $heads <= 6; $heads++) {
+    echo "<h{$heads}>" . "goodbye world" . "</h{$heads}>";
+}
 ?>
-
-
-<?php   
-  $data = file("data.txt"); ?>
-    <table>
-    <?php    for ($i = 0; $i < count($data); $i++) { ?>
-                <tr>
-    <?php       $tokens = explode(",", trim($data[$i])); 
-                
-                foreach($tokens as $token) { ?>
-                    <td> <?= $token ?> </td>
-    <?php       }
-
-                echo "</tr>";
-            } 
-    echo "</table>";
-?> 
-
 
 
 <?php
-    myTable::make_table("data.txt");
-    require_once 'footer.php';
-?>
+$data = file("data.txt"); ?>
+<table>
+    <?php for ($i = 0; $i < count($data); $i++) { ?>
+        <tr>
+            <?php $tokens = explode(",", trim($data[$i]));
+
+            foreach ($tokens as $token) { ?>
+                <td> <?= $token ?> </td>
+        <?php       }
+
+            echo "</tr>";
+        }
+        echo "</table>";
+        ?>
+
+
+
+        <?php
+        myTable::make_table("data.txt");
+        require_once 'footer.php';
+        ?>
