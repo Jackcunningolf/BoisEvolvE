@@ -24,6 +24,12 @@ $dao = new Dao();
   </div>
 </a>
 
+<a href="edit.php">
+  <div>
+  Edit
+  </div>
+</a>
+
 <div id="user_bio">
   <?php 
     echo $_SESSION['username'] . "'s bio" . "<br>"; 

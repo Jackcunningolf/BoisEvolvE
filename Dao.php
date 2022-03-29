@@ -164,5 +164,20 @@ class Dao {
         }
     }
 
+    public function editUserBio($nick, $newbio) {
+        try {
+            $connect = $this->getConnection();
+            $saveQ = "UPDATE promoter SET bio = :bio where nickname = :nick";
+            $q = $connect->prepare($saveQ);
+            $q->bindParam(":bio", $newbio);
+            $q->bindParam(":nick", $nick);
+            $q->execute();
+
+        } catch (Exception $e) {
+            file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
+            exit;
+        }
+    }
+
     // have function that checks whether a certain field is in the database or not
 }
