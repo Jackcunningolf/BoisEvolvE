@@ -11,7 +11,7 @@ class promo {
     public $user_name;
 
 
-    public function __construct($dfltPromoter = "default promoter", $dfltHead = "default title", $dfltDesc = "default description", $dfltPromo = "default promo") {
+    public function __construct($dfltPromoter = "default promoter", $dfltHead = "default title", $dfltDesc = "default description", $dfltPromo = "default promo", $id) {
         $this->promo_promoter = $dfltPromoter;
         $this->promo_title = $dfltHead;
         $this->promo_description = $dfltDesc;
@@ -20,8 +20,13 @@ class promo {
                 "<h3>" . $this->promo_title . "</h3>" . 
                 "<p>" . $this->promo_description . "</p>" . 
                 "<p>" . $this->promo_text . "</p>" . 
-                "Posted by: " . $this->promo_promoter .
-             "</div>";
+                "<span id='promo_poster'> Posted by: " . $this->promo_promoter . "</span>"; 
+
+                if ($_SESSION['username'] == $this->promo_promoter) {
+                        echo "<a href='handlers/delete.php?id={$id}'> X </a>";
+                }
+                      
+        echo "</div>";
     }
 
     public function getPromoName() {

@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('location: ../index.php');
+    exit;
+}
+?>
+
 <h1>New Post</h1>
 <link rel="stylesheet" href="../styles/phpstyle.css">
 <!-- enctype="multipart/form-data" -->

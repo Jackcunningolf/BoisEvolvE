@@ -18,7 +18,11 @@ $dao = new Dao();
     This is the feed on the left side
 </div>
 
-<a href="handlers/logout_handler.php">Log out</a>
+<a href="handlers/logout_handler.php">
+  <div id="user_logout">
+  Log out
+  </div>
+</a>
 
 <div id="user_bio">
   <?php 
@@ -33,7 +37,7 @@ $dao = new Dao();
 <div id="promo_feed">
     <?php 
         foreach ($promotions as $promotion) {
-            new promo($promotion['nickname'], $promotion['title'], $promotion['promo_description'], $promotion['promo_text']);
+            new promo($promotion['nickname'], $promotion['title'], $promotion['promo_description'], $promotion['promo_text'], $promotion['promo_id']);
         } 
     ?>
 

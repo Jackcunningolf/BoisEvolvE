@@ -13,20 +13,14 @@ require_once 'nav.php';
 require_once 'Dao.php';
 $dao = new Dao();
 
-if (isset($_SESSION['username'])) {
-    echo "Welcome " . $_SESSION['username'] . "!";
-}
-
+$promotions = $dao->getPromotions(); 
+$promotions = array_reverse($promotions);
 ?>
-
-Make a <a href="handlers/promo_maker.php">new</a> promo
-
-<?php $promotions = $dao->getPromotions(); ?>
 
 <div id="promo_feed">
     <?php 
         foreach ($promotions as $promotion) {
-            new promo($promotion['nickname'], $promotion['title'], $promotion['promo_description'], $promotion['promo_text']);
+            new promo($promotion['nickname'], $promotion['title'], $promotion['promo_description'], $promotion['promo_text'], $promotion['promo_id']);
         } 
     ?>
 </div>

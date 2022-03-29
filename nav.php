@@ -1,21 +1,18 @@
 <body>
     <div id="navigate">
-        <ul>
-            <li <?php if ($currentPage == "home") { echo 'class="currPage"'; } ?>>
-                <a href="home.php"> 
-                    home 
-                </a>
-            </li>
-            <li <?php if ($currentPage == "contact") { echo 'class="currPage"'; } ?>>
-                <a href="contact.php" >
-                    contact
-                </a>  
-            </li>
-            <li <?php if ($currentPage == "about") { echo 'class="currPage"'; } ?>>
-                <a href="about.php" >
-                    about
-                </a>
-            </li>
-        </ul>  
+        
+
+            <a href="home.php" id="homenav" <?php echo ($currentPage == "home") ? 'class="currPage"' : 'class="otherPage"' ?>> 
+                home
+            </a>
+
+            <!-- <a href="contact.php" <?php echo ($currentPage == "contact") ? 'class="currPage"' : 'class="otherPage"' ?>>
+                contact
+            </a> 
+
+            <a href="about.php" <?php echo ($currentPage == "about") ? 'class="currPage"' : 'class="otherPage"'?>>
+                about
+            </a>
+           -->
     </div>
 </body>

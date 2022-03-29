@@ -2,7 +2,7 @@
     <!-- </body> -->
     
     <footer id="myfooter">
-        footer     
+        <a href="#head_hello">top of page</a>    
     </footer>
             
 </html>

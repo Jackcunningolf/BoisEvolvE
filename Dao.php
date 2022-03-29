@@ -73,6 +73,15 @@ class Dao {
         $q->execute();
     }
 
+    public function deletePromotion($id) {
+        $connect = $this->getConnection();
+        // file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | User deleted --> id : {$id}\n", FILE_APPEND);
+        $saveQ = "DELETE FROM promotion WHERE promo_id = :id";
+        $q = $connect->prepare($saveQ);
+        $q->bindParam(":id", $id);
+        $q->execute();
+    }
+
     public function checkUserExists($nick, $pass) {
         
 
@@ -112,7 +121,11 @@ class Dao {
     public function getPromotions() {
         try {
             $connect = $this->getConnection();
-            return $connect->query("SELECT * FROM promotion");
+            $saveQ = "SELECT * FROM promotion";
+            $q = $connect->prepare($saveQ);
+            $q->execute();
+            $promos = $q->fetchAll();
+            return $promos;
         } catch (Exception $e) {
             file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
             exit;
