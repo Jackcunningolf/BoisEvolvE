@@ -23,7 +23,7 @@ class promo {
                 "<span id='promo_poster'> Posted by: " . $this->promo_promoter . "</span>"; 
 
                 if ($_SESSION['username'] == $this->promo_promoter) {
-                        echo "<a href='handlers/delete.php?id={$id}'> X </a>";
+                        echo "<a class='deletex' href='handlers/delete.php?id={$id}'> X </a>";
                 }
                       
         echo "</div>";
