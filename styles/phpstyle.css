@@ -44,6 +44,12 @@ body {
     background-color: white;
 }
 
+.feedUser {
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+
 #leftfeed {
     float: left; 
     margin-left: 10px;

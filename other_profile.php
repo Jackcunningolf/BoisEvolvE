@@ -9,6 +9,11 @@ require_once 'header.php';
 require_once 'promos.php';
 require_once 'Dao.php';
 $dao = new Dao();
+$name = $_GET['name'];
+if ($name == $_SESSION['username']) {
+  header('location: user_profile.php');
+  exit;
+}
 ?>
 
 <link rel="stylesheet" href="styles/phpStyle.css">
@@ -16,27 +21,15 @@ $dao = new Dao();
 
 <?php require_once 'feeds.php'; ?>
 
-<a href="handlers/logout_handler.php">
-  <div id="user_logout">
-  Log out
-  </div>
-</a>
-
-<a href="edit.php">
-  <div id="user_logout">
-  Edit
-  </div>
-</a>
-
 <div id="user_bio">
   <?php 
-    echo $_SESSION['username'] . "'s bio" . "<br>"; 
-    $bio = $dao->getUserBio($_SESSION['username']);
+    echo $name . "'s bio" . "<br>"; 
+    $bio = $dao->getUserBio($name);
     echo $bio['bio'];
   ?>
 </div>
 
-<?php $promotions = $dao->getUserPromotions($_SESSION['username']); ?>
+<?php $promotions = $dao->getUserPromotions($name); ?>
 
 <div id="promo_feed">
     <?php 
@@ -46,4 +39,3 @@ $dao = new Dao();
     ?>
 
 </div>
-
