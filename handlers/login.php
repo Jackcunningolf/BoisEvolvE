@@ -6,16 +6,17 @@ $dao = new Dao();
 $nick = $_POST['nickname'];
 $pass = $_POST['password'];
 
-$_SESSION['post_data'] = $_POST;
+if ($nick == null or $nick == "" or $pass == null or $pass == "") {
+  $_SESSION['message'] = "Must supply both a username and password.";
+  header('location: ../home.php');
+  exit;
+}
 
-$user = $dao->checkUserExists($nick, $pass);
+$user = $dao->getUser($nick);
 
-// echo $user['nickname'] . "\n";
-// echo $user['pass'];
-
-if (!isset($user['nickname']) ) {
-    file_put_contents("../log.txt", "User could not be found\n", FILE_APPEND);
-    $_SESSION['message'][] = "User not found";
+if (!password_verify(htmlspecialchars($pass), $user['pass'])) {
+    // file_put_contents("../log.txt", "User could not be found\n", FILE_APPEND);
+    $_SESSION['message'] = "User not found";
     header('location: ../index.php');
     exit;
 } else {

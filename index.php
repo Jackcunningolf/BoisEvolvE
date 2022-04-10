@@ -18,12 +18,12 @@ session_regenerate_id(true);
 </form>
 
 
-New here? <a href="new_user.php">Create new account</a>
+New here? <a href="new_user.php">Create new account</a> <br>
 
 <?php
 if (count($_SESSION['message']) > 0) {
-    echo "<pre>" .  print_r($_SESSION['message'], 1) . "</pre>";
-
+    echo $_SESSION['message'] . "<br>";
+    
     if (isset($_SESSION['message'])) {
         unset($_SESSION['message']);
     }

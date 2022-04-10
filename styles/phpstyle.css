@@ -2,9 +2,13 @@ body {
     margin: 0;
     background-color: #e8f3f3;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100vh;
 }
 
-
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
 
 #navigate {
     text-align: center;
@@ -40,13 +44,14 @@ body {
     height: 800px;
     width: 10%;
     border: solid black 1px;
-    margin-bottom: 300px;
+    margin-bottom: 250px;
     background-color: white;
 }
 
 .feedUser {
     text-align: center;
     padding: 5px;
+    width: fit-content;
     text-decoration: none;
 }
 
@@ -90,11 +95,18 @@ body {
     padding-left: 10px;
 }
 
-.promo > a {
+.promo > .deletex {
     float: right;
     padding-right: 10px;
     text-decoration: none;
 }
+
+.promo > a > h3 {
+    border: solid black 1px;
+    padding: 10px;
+    /* width: min-content; */
+}
+
 
 #test {
     display: block;
@@ -110,10 +122,12 @@ input {
 
 footer {    
     position: relative;
+    top:100%;
     bottom: 0;
+    margin-bottom: 0;
     text-align: center;
     width: 100%;
-    height: 100px;
+    height: 75px;
     font-size: 50px;
     border-top: solid black 2px;
     background-color: rgb(136, 188, 204);
@@ -161,7 +175,7 @@ div > textarea {
     /* overflow: scroll; */
 }
 
-#promo_feed {
+.promo_feed {
     width: 78%;
     margin-left: 11%;
     text-align: center;

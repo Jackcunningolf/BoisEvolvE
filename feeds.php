@@ -5,7 +5,7 @@ $users = $dao->getUsers();
 ?>
 
 <div id="leftfeed" class="feeds">
-    This is the feed on the left side
+    What other 
     <?php foreach ($users as $user) {
         echo  "<a href='other_profile.php?name={$user['nickname']}'>" .
                 "<div class='feedUser'>" . 

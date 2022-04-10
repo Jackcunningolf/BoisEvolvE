@@ -82,17 +82,13 @@ class Dao {
         $q->execute();
     }
 
-    public function checkUserExists($nick, $pass) {
-        
-
-        // file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | Checking if user exists --> nick : {$nick}\n", FILE_APPEND);
-        
+    public function getUser($nick) {        
         try {
             $connect = $this->getConnection();
             file_put_contents("log.txt", "checking if " . $nick . " exists...", FILE_APPEND);
-            $saveQ = "SELECT * FROM promoter WHERE nickname=:nickname AND pass=:pass";
+            $saveQ = "SELECT * FROM promoter WHERE nickname=:nickname";
             $q = $connect->prepare($saveQ);
-            $q->execute(['nickname' => $nick, 'pass' => $pass]);
+            $q->execute(['nickname' => $nick]);
             $user = $q->fetch();
             return $user;
         } catch (Exception $e) {
@@ -130,6 +126,16 @@ class Dao {
             file_put_contents("log.txt", $e->getMessage(), FILE_APPEND);
             exit;
         }
+    }
+
+    public function getPromotion($id) {
+        $connect = $this->getConnection();
+        $saveQ = "SELECT * FROM promotion WHERE promo_id = :id";
+        $q = $connect->prepare($saveQ);
+        $q->bindParam(":id", $id);
+        $q->execute();
+        $userpromo = $q->fetch();
+        return $userpromo;
     }
 
     public function getUserPromotions($nick) {

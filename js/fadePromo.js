@@ -1,6 +1,11 @@
 $(function() {
     $(".deletex").click(function() {
-       $(this).parent().fadeOut("slow");
+        var conf = confirm("Are you sure you want to delete?");
+        if (conf) {
+            $(this).parent().fadeOut("slow");
+        } else {
+            return false;
+        }
     });
   });
 

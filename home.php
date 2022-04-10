@@ -22,7 +22,7 @@ $promotions = $dao->getPromotions();
 $promotions = array_reverse($promotions);
 ?>
 
-<div id="promo_feed">
+<div class="promo_feed">
     <?php 
         foreach ($promotions as $promotion) {
             new promo($promotion['nickname'], $promotion['title'], $promotion['promo_description'], $promotion['promo_text'], $promotion['promo_id']);
