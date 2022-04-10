@@ -80,9 +80,12 @@ a {
     background-color: rgb(175, 203, 211);
 }
 
+.promo > p {
+    padding: 10px;
+}
 
 .promo:hover {
-    background-color: rgb(148, 174, 182);
+    background-color: rgb(189, 215, 223);
 }
 
 .promo > textarea {
@@ -90,30 +93,57 @@ a {
     max-width: fit-content;
 }
 
-.promo > #promo_poster {
+.promo > a > .promo_poster {
     float: left;
-    padding-left: 10px;
-}
-
-.promo > .deletex {
-    float: right;
-    padding-right: 10px;
-    text-decoration: none;
-}
-
-.promo > a > h3 {
-    border: solid black 1px;
     padding: 10px;
-    /* width: min-content; */
+    color: black;
+    position: relative;
+    top: 10px;
+    background-color: rgb(124, 168, 182);
+    border-right: solid rgb(231, 198, 198) 1px;
+    border-top: solid rgb(231, 198, 198) 1px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 20px;
 }
+
+.promo > a > .deletex {
+    float: right;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 10px;
+    background-color: rgb(124, 168, 182);
+    /* border: solid rgb(231, 198, 198) 1px; */
+    border-left: solid rgb(231, 198, 198) 1px;
+    border-top: solid rgb(231, 198, 198) 1px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 20px;
+} .promo > a > .deletex:hover {
+    background-color: rgb(100, 150, 165);
+}
+
+.promo > a > .promo_title {
+    color: black;
+    background-color: rgb(124, 168, 182);
+    border: solid rgb(231, 198, 198) 1px;
+    position: relative;
+    top: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+} .promo > a > .promo_title:hover {
+    background-color: rgb(100, 150, 165);
+}
+
+
 
 
 #test {
     display: block;
     height: 100%;
     width: 100%;
-    /* position: fixed; */
-    /* text-decoration: none; */
 }
 
 input {
@@ -179,4 +209,10 @@ div > textarea {
     width: 78%;
     margin-left: 11%;
     text-align: center;
+}
+
+#login {
+    margin: 0;
+    padding-left: 10px;
+    width: fit-content;
 }

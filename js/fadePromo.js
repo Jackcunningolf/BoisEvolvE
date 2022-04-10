@@ -1,8 +1,8 @@
 $(function() {
     $(".deletex").click(function() {
-        var conf = confirm("Are you sure you want to delete?");
+        var conf = confirm("Are you sure you want to delete this post?");
         if (conf) {
-            $(this).parent().fadeOut("slow");
+            $(this).parent().parent().fadeOut("slow");
         } else {
             return false;
         }
