@@ -41,17 +41,17 @@ a {
 }
 
 .feeds {
-    height: 800px;
+    height: 750px;
     width: 10%;
+    padding: 5px;
     border: solid black 1px;
     margin-bottom: 250px;
     background-color: white;
+    text-align: center;
 }
 
 .feedUser {
-    text-align: center;
     padding: 5px;
-    width: fit-content;
     text-decoration: none;
 }
 
@@ -138,8 +138,6 @@ a {
 }
 
 
-
-
 #test {
     display: block;
     height: 100%;
@@ -148,6 +146,8 @@ a {
 
 input {
     cursor: pointer;
+    padding: 3px;
+    margin: 5px;
 }
 
 footer {    
@@ -211,8 +211,16 @@ div > textarea {
     text-align: center;
 }
 
-#login {
+#login, #new_user, #new_post {
     margin: 0;
-    padding-left: 10px;
+    padding-left: 15px;
     width: fit-content;
+}
+
+.login_msg {
+    border: solid rgb(179, 27, 27) 4px;
+    background-color: rgb(226, 166, 132);
+    width: fit-content;
+    padding: 7px;
+    margin-top: 5px;
 }

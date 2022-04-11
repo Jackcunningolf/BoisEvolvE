@@ -1,15 +1,5 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
-    header('location: index.php');
-    exit;
-  }
-?>
-
-<script src = "node_modules/jquery/dist/jquery.min.js"></script>
-<script src = "js/fadePromo.js"></script>
-
-<?php
 $currentPage = "home";
 require_once 'header.php';
 require_once 'promos.php';
@@ -29,9 +19,6 @@ $promotions = array_reverse($promotions);
         } 
     ?>
 </div>
-
-
-
 
 <?php
 require_once 'footer.php';

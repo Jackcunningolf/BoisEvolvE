@@ -1,5 +1,6 @@
 <?php 
 // session_start(); 
+$currentPage = "login";
 require_once 'header.php';
 session_regenerate_id(true);
 ?>
@@ -21,17 +22,15 @@ session_regenerate_id(true);
         </div>
     </form>
     
-    
-    
     New here? <a href="new_user.php">Create new account</a> <br>
-</div>
 
-<?php
-if (count($_SESSION['message']) > 0) {
-    echo $_SESSION['message'] . "<br>";
-    
-    if (isset($_SESSION['message'])) {
-        unset($_SESSION['message']);
+    <?php
+    if (count($_SESSION['message']) > 0) {
+        echo "<div class='login_msg'>" . $_SESSION['message'] . "</div>";
+        
+        if (isset($_SESSION['message'])) {
+            unset($_SESSION['message']);
+        }
     }
-}
-?>
+    ?>
+</div>

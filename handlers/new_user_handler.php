@@ -10,6 +10,11 @@ $email = htmlspecialchars($_POST['email']);
 $pass = htmlspecialchars($_POST['password']);
 $bio = htmlspecialchars($_POST['bio']);
 
+$_SESSION['first_name'] = $fname;
+$_SESSION['last_name'] = $lname;
+$_SESSION['email'] = $email;
+$_SESSION['bio'] = $bio;
+
 if (!preg_match("/^[A-Z0-9+_.-]+@[A-Z0-9.-]+$/i", $email)) {
     $_SESSION['message'] = "Please provide a valid email address";
     header('location:../new_user.php');

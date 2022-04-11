@@ -38,13 +38,30 @@ class utils {
                             <div id="userprofile" class="header_item"> User Profile </div>
                      </a>
 
-                     <a href="handlers/promo_maker.php", title="Make a new post">
+                     <a href="promo_maker.php", title="Make a new post">
                             <div id="userprofile" class="header_item"> New Post </div>
                      </a>
                      
               </h1>
-<?php     }
+<?php  }
 
+       public static function createLoginHeader() { ?>
+              <h1 class='header'>
+                     <a href="index.php">
+                            <div id="circ" class="header_item">
+                                   <img src="images/BlobGuy.png" alt="Shmeareian", title="Go to home page">
+                            </div>
+                     </a>
+
+                     <span id="head_hello" >
+                            Welcome to Boise Flavors 
+                     </span>
+                     
+              </h1>
+
+
+
+<?php  }
 
 }
 
