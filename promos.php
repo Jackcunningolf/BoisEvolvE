@@ -21,11 +21,13 @@ class promo {
                 "<a href='user_promo.php?id={$id}'> <span class='promo_title'>" . $this->promo_title . "</span> </a>" . 
                 "<p>" . $this->promo_description . "</p>" . 
                 "<p>" . $this->promo_text . "</p>" . 
-                "<a href='other_profile.php?name={$this->promo_promoter}'> <span class='promo_poster'> Posted by: " . $this->promo_promoter . "</span> </a>"; 
+                "<a href='other_profile.php?name={$this->promo_promoter}'> <span class='promo_poster'> Posted by: " . $this->promo_promoter . "</span> </a>" .
+                "<a href='user_promo.php?id={$id}'> <span class='promo_comments'> Comment </span> </a>"; 
 
                 if ($_SESSION['username'] == $this->promo_promoter) {
-                        echo " <a href='handlers/delete.php?id={$id}'> <span class='deletex'> X </span> </a>";
-                }
+                    echo " <a href='handlers/delete.php?id={$id}'> <span class='deletex'> X </span> </a>";
+                    // echo "<style> .promo > a > .promo_comments { right: 80px } </style>";
+                } 
                       
         echo "</div>";
     }

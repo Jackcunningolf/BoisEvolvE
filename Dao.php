@@ -24,16 +24,18 @@ class Dao {
         }
     }
 
-    public function saveComment ($f_name, $l_name) {
+    public function saveComment ($nick, $comment) {
         $connect = $this->getConnection();
-        $saveQ = "INSERT INTO promoter (first_name, last_name)
-            VALUES (:first_name, :last_name)";
+        $saveQ = "INSERT INTO comments (user_nickname, user_comment)
+            VALUES (:nick, :comment)";
 
         $q = $connect->prepare($saveQ);
-        $q->bindParam(":first_name", $f_name);
-        $q->bindParam(":last_name", $l_name);
+        $q->bindParam(":nick", $nick);
+        $q->bindParam(":comment", $comment);
         $q->execute();
     }
+
+    // getusercomments
 
     public function getUsers () {
         try {

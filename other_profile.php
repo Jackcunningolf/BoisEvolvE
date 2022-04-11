@@ -1,9 +1,5 @@
 <?php
 session_start();
-// if (!isset($_SESSION['username'])) {
-//   header('location: index.php');
-//   exit;
-// }
 
 require_once 'header.php';
 require_once 'promos.php';
@@ -30,7 +26,10 @@ if ($name == $_SESSION['username']) {
   ?>
 </div>
 
-<?php $promotions = $dao->getUserPromotions($name); ?>
+<?php 
+  $promotions = $dao->getUserPromotions($name); 
+  $promotions = array_reverse($promotions);
+?>
 
 <div class="promo_feed">
     <?php 
