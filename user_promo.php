@@ -20,6 +20,7 @@ $promotion = $dao->getPromotion($_GET['id']);
         <form action="handlers/comments.php" method="POST">
             <textarea name="comment" cols="50" rows="5" placeholder="be courteous"></textarea>
             <input id="comment_box" type="submit" value="Add a comment!">
+            <input type="text" name="promo_id" hidden value=<?= $_GET['id'] ?>>
         </form>
     </div>
 </div>

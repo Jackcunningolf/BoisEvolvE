@@ -6,9 +6,10 @@ $dao = new Dao();
 ini_set('display_errors', 1);
 
 $comment = htmlspecialchars($_POST['comment']);
+$promoid = $_POST['promo_id'];
 
 echo $comment;
-$dao->saveComment($_SESSION['username'], $comment);
+$dao->saveComment($_SESSION['username'], $promoid, $comment);
 
-// header('location: ../about.php');
-// exit;
+header("location: ../user_promo.php?id=$promoid");
+exit;

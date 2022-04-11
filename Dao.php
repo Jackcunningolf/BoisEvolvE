@@ -24,18 +24,27 @@ class Dao {
         }
     }
 
-    public function saveComment ($nick, $comment) {
+    public function saveComment ($nick, $id, $comment) {
         $connect = $this->getConnection();
-        $saveQ = "INSERT INTO comments (user_nickname, user_comment)
-            VALUES (:nick, :comment)";
+        $saveQ = "INSERT INTO comments (nickname, promo_id, user_comment)
+            VALUES (:nick, :promo_id, :comment)";
 
         $q = $connect->prepare($saveQ);
         $q->bindParam(":nick", $nick);
+        $q->bindParam("promo_id", $id);
         $q->bindParam(":comment", $comment);
         $q->execute();
     }
 
-    // getusercomments
+    public function getPromoComments($id) {
+        $connect = $this->getConnection();
+        $saveQ = "SELECT * FROM promotion WHERE promo_id = :id";
+        $q = $connect->prepare($saveQ);
+        $q->bindParam(":id", $id);
+        $q->execute();
+        $userpromo = $q->fetch();
+        return $userpromo;
+    }
 
     public function getUsers () {
         try {

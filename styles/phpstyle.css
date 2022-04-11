@@ -125,23 +125,6 @@ a {
     background-color: rgb(100, 150, 165);
 }
 
-.promo > a > .promo_comments {
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    position: relative;
-    top: 23px;
-    right: 75px;
-    background-color: rgb(124, 168, 182);
-    border-left: solid rgb(231, 198, 198) 1px;
-    border-top: solid rgb(231, 198, 198) 1px;
-    border-right: solid rgb(231, 198, 198) 1px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-} .promo > a > .promo_comments:hover {
-    background-color: rgb(100, 150, 165);
-}
-
 .promo > a > .promo_title {
     color: black;
     background-color: rgb(124, 168, 182);
@@ -219,9 +202,8 @@ table > tr, td:hover {
     border: solid black 1px;
 }
 
-div > textarea {
+div > textarea, div > form > textarea {
     resize: none;
-    /* overflow: scroll; */
 }
 
 .promo_feed {
