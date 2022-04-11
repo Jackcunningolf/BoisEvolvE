@@ -1,7 +1,20 @@
 <?php
+session_start();
 
 class utils {
 
+    public static function createComment($nickname, $comment, $comm_id, $promo_id) { ?>
+              <div class="promo_comment">
+                     <p> <?=$comment?> </p>
+       <?php        echo " <a href='other_profile.php?name={$nickname}'> <span class='promo_poster'> Posted by: {$nickname} </span> </a>";
+              if ($_SESSION['username'] == $nickname) {
+                     $_SESSION['delete_type'] = "comment";
+                    echo " <a href='handlers/delete.php?id={$comm_id}&promo_id={$promo_id}'> <span class='deletex'> X </span> </a>";
+                } ?>
+              </div>
+
+
+<?php    } 
 
     public static function createHeader() { ?>
         <h1 class='header'>

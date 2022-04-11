@@ -67,7 +67,7 @@ a {
     /* margin-left: 20px; */
 }
 
-.promo {
+.promo, .promo_comment {
     display: inline-block;
     margin-left: 30px;
     margin-right: 30px;
@@ -93,7 +93,7 @@ a {
     max-width: fit-content;
 }
 
-.promo > a > .promo_poster {
+.promo > a > .promo_poster, .promo_comment > a > .promo_poster {
     float: left;
     padding: 10px;
     color: black;
@@ -104,11 +104,11 @@ a {
     border-top: solid rgb(231, 198, 198) 1px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 20px;
-} .promo > a > .promo_poster:hover {
+} .promo > a > .promo_poster:hover, .promo_comment > a > .promo_poster:hover {
     background-color: rgb(100, 150, 165);
 }
 
-.promo > a > .deletex {
+.promo > a > .deletex, .promo_comment > a > .deletex {
     float: right;
     padding: 10px;
     text-decoration: none;
@@ -121,7 +121,7 @@ a {
     border-top: solid rgb(231, 198, 198) 1px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 20px;
-} .promo > a > .deletex:hover {
+} .promo > a > .deletex:hover, .promo_comment > a > .deletex:hover {
     background-color: rgb(100, 150, 165);
 }
 
@@ -206,7 +206,7 @@ div > textarea, div > form > textarea {
     resize: none;
 }
 
-.promo_feed {
+.promo_feed, .comment_feed {
     width: 78%;
     margin-left: 11%;
     text-align: center;
@@ -226,9 +226,13 @@ div > textarea, div > form > textarea {
     margin-top: 5px;
 }
 
-#comment_box {
+#comment_form {
     position: relative;
     top: -35px;
     height: 40px;
     font-size: 25px;
+}
+
+#comment_test {
+    border: solid black 1px;
 }

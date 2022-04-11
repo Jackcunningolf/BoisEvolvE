@@ -36,14 +36,23 @@ class Dao {
         $q->execute();
     }
 
-    public function getPromoComments($id) {
+    public function deleteComment($id) {
         $connect = $this->getConnection();
-        $saveQ = "SELECT * FROM promotion WHERE promo_id = :id";
+        // file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | User deleted --> id : {$id}\n", FILE_APPEND);
+        $saveQ = "DELETE FROM comments WHERE id = :id";
         $q = $connect->prepare($saveQ);
         $q->bindParam(":id", $id);
         $q->execute();
-        $userpromo = $q->fetch();
-        return $userpromo;
+    }
+
+    public function getPromoComments($id) {
+        $connect = $this->getConnection();
+        $saveQ = "SELECT * FROM comments WHERE promo_id = :id";
+        $q = $connect->prepare($saveQ);
+        $q->bindParam(":id", $id);
+        $q->execute();
+        $usercomments = $q->fetchAll();
+        return $usercomments;
     }
 
     public function getUsers () {
