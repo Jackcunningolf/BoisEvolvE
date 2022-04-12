@@ -2,15 +2,16 @@
 require_once '../Dao.php';
 $dao = new Dao();
 
-$promo_id = $_POST['promo_id'];
-echo $promo_id;
-// if ($_SESSION['delete_type'] == "comment") {
-//     $dao->deleteComment($_GET['id']);
-//     header("location: ../user_promo.php?{$promo_id}");
-//     exit;
-// } else {
-//     $dao->deletePromotion($_GET['id']);
-//     header('location: ../home.php');
-//     exit;
-// }
+$promo_id = $_GET['promo_id'];
+$id = $_GET['id'];
+
+if (isset($id) and isset($promo_id)) {
+    $dao->deleteComment($id);
+    header("location: ../user_promo.php?id={$promo_id}");
+    exit;
+} else {
+    $dao->deletePromotion($promo_id);
+    header('location: ../home.php');
+    exit;
+}
 

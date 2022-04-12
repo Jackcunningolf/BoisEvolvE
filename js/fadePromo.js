@@ -1,5 +1,5 @@
 $(function() {
-    $(".deletex").click(function() {
+    $(".delete_promo").click(function() {
         var conf = confirm("Are you sure you want to delete this post?");
         if (conf) {
             $(this).parent().parent().fadeOut("slow");
@@ -8,6 +8,17 @@ $(function() {
         }
     });
   });
+
+$(function() {
+    $(".delete_comment").click(function() {
+        var conf = confirm("Are you sure you want to delete this comment?");
+        if (conf) {
+            $(this).parent().parent().fadeOut("slow");
+        } else {
+            return false;
+        }
+    });
+});
 
 $(function() {
     $("#leftfeed").hover(function() {

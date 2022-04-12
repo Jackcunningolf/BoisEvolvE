@@ -9,7 +9,7 @@ class utils {
        <?php        echo " <a href='other_profile.php?name={$nickname}'> <span class='promo_poster'> Posted by: {$nickname} </span> </a>";
               if ($_SESSION['username'] == $nickname) {
                      $_SESSION['delete_type'] = "comment";
-                    echo " <a href='handlers/delete.php?id={$comm_id}&promo_id={$promo_id}'> <span class='deletex'> X </span> </a>";
+                    echo " <a href='handlers/delete.php?id={$comm_id}&promo_id={$promo_id}'> <span class='delete_comment'> X </span> </a>";
                 } ?>
               </div>
 

@@ -24,7 +24,7 @@ class promo {
                 "<a href='other_profile.php?name={$this->promo_promoter}'> <span class='promo_poster'> Posted by: " . $this->promo_promoter . "</span> </a>"; 
 
                 if ($_SESSION['username'] == $this->promo_promoter) {
-                    echo " <a href='handlers/delete.php?id={$id}'> <span class='deletex'> X </span> </a>";
+                    echo " <a href='handlers/delete.php?promo_id={$id}'> <span class='delete_promo'> X </span> </a>";
                     // echo "<style> .promo > a > .promo_comments { right: 80px } </style>";
                 } 
                       

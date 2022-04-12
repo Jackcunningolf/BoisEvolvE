@@ -108,7 +108,7 @@ a {
     background-color: rgb(100, 150, 165);
 }
 
-.promo > a > .deletex, .promo_comment > a > .deletex {
+.promo > a > .delete_promo, .promo_comment > a > .delete_comment {
     float: right;
     padding: 10px;
     text-decoration: none;
@@ -121,7 +121,7 @@ a {
     border-top: solid rgb(231, 198, 198) 1px;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 20px;
-} .promo > a > .deletex:hover, .promo_comment > a > .deletex:hover {
+} .promo > a > .delete_promo:hover, .promo_comment > a > .delete_comment:hover {
     background-color: rgb(100, 150, 165);
 }
 
