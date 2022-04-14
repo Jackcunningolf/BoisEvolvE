@@ -22,7 +22,7 @@ $comments = array_reverse($comments);
         <input type="text" name="promo_id" hidden value=<?= $_GET['id'] ?>>
         <input type="text" name="name" hidden value=<?=$_SESSION['username'] ?>>
         <textarea id="comment_area" name="comment" cols="50" rows="5" placeholder="be courteous"></textarea>
-        <input type="submit" value="Add a comment!">
+        <input id="comment_submit" type="submit" value="Add a comment!">
     </form>
 
     <div class="comment_feed">

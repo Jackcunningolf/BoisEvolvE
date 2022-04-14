@@ -55,6 +55,15 @@ class Dao {
         return $usercomments;
     }
 
+    public function deletePromoComments($id) {
+        $connect = $this->getConnection();
+        // file_put_contents("../log.txt", $this->current_time->format('Y-m-d H:i:s') . " | User deleted --> id : {$id}\n", FILE_APPEND);
+        $saveQ = "DELETE FROM comments WHERE promo_id = :id";
+        $q = $connect->prepare($saveQ);
+        $q->bindParam(":id", $id);
+        $q->execute();
+    }
+
     public function getUsers () {
         try {
             $connect = $this->getConnection();

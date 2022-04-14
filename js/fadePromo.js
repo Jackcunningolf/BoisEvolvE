@@ -3,6 +3,9 @@ $(function() {
         var conf = confirm("Are you sure you want to delete this post?");
         if (conf) {
             $(this).parent().parent().fadeOut("slow");
+            $("#comment_area").fadeOut("slow");
+            $("#comment_submit").fadeOut("slow");
+            $(".promo_comment").fadeOut("slow");
         } else {
             return false;
         }

@@ -10,6 +10,7 @@ if (isset($id) and isset($promo_id)) {
     header("location: ../user_promo.php?id={$promo_id}");
     exit;
 } else {
+    $dao->deletePromoComments($promo_id);
     $dao->deletePromotion($promo_id);
     header('location: ../home.php');
     exit;
