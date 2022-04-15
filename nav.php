@@ -6,13 +6,9 @@
                 home
             </a>
 
-            <!-- <a href="contact.php" <?php echo ($currentPage == "contact") ? 'class="currPage"' : 'class="otherPage"' ?>>
-                contact
-            </a> 
-
             <a href="about.php" <?php echo ($currentPage == "about") ? 'class="currPage"' : 'class="otherPage"'?>>
                 about
             </a>
-           -->
+          
     </div>
 </body>

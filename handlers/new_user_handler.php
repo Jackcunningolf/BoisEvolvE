@@ -15,6 +15,12 @@ $_SESSION['last_name'] = $lname;
 $_SESSION['email'] = $email;
 $_SESSION['bio'] = $bio;
 
+if (!preg_match("/^[a-z ,.'-]+$/i", $fname) or !preg_match("/^[a-z ,.'-]+$/i", $lname)) {
+    $_SESSION['message'] = "Name has invalid characters";
+    header('location:../new_user.php');
+    exit;
+}
+
 if (!preg_match("/^[A-Z0-9+_.-]+@[A-Z0-9.-]+$/i", $email)) {
     $_SESSION['message'] = "Please provide a valid email address";
     header('location:../new_user.php');

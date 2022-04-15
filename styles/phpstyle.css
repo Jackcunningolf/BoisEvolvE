@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #e8f3f3;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     min-height: 100vh;
 }
 
@@ -15,7 +15,7 @@ a {
     /* width: 10px; */
     margin-bottom: 15px;
     position: relative;
-    top: -13px;
+    top: -5px;
 }
 
 #navigate > a {
@@ -28,10 +28,10 @@ a {
 }
 
 .currPage {
-    background-color: rgb(170, 192, 199);
+    background-color: rgb(194, 153, 126);
 }
 .currPage:hover {
-    background-color: rgb(131, 156, 163);
+    background-color: rgb(194, 156, 163);
 }
 
 .otherPage {

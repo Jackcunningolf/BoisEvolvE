@@ -8,7 +8,11 @@ $(function() {
         $('<div class = "promo_comment">' + 
             comment + 
             '</div>'
-        ).prependTo(".comment_feed");
+        ).prependTo(".comment_feed").fadeIn("slow");
+
+        $('#comment_form').each(function() { 
+            this.reset() 
+            });
 
         $.ajax({
             type: "POST", 
@@ -20,5 +24,9 @@ $(function() {
     });
 
 });
+
+$(function() {
+
+})
 
 
