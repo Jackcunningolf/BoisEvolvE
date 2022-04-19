@@ -148,8 +148,8 @@ a {
 
 input {
     cursor: pointer;
-    padding: 3px;
-    margin: 5px;
+    padding: 4px;
+    margin: 8px;
 }
 
 footer {    
@@ -212,7 +212,7 @@ div > textarea, div > form > textarea {
     text-align: center;
 }
 
-#login, #new_user, #new_post {
+#login, #new_user, #new_post, #edit_form {
     margin: 0;
     padding-left: 15px;
     width: fit-content;
@@ -226,7 +226,7 @@ div > textarea, div > form > textarea {
     margin-top: 5px;
 }
 
-#comment_form {
+#comment_submit {
     position: relative;
     top: -35px;
     height: 40px;

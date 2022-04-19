@@ -26,7 +26,10 @@ session_regenerate_id(true);
 
     <?php
     if (count($_SESSION['message']) > 0) {
-        echo "<div class='login_msg'>" . $_SESSION['message'] . "</div>";
+        //echo "<div class='login_msg'>" . $_SESSION['message'] . "</div>";
+        foreach($_SESSION['message'] as $msg) {
+            echo "<div class='login_msg'> " . $msg . "</div>";
+        }
         
         if (isset($_SESSION['message'])) {
             unset($_SESSION['message']);
