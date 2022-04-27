@@ -39,3 +39,5 @@ if ($name == $_SESSION['username']) {
     ?>
 
 </div>
+
+<?php require_once 'footer.php'; ?>

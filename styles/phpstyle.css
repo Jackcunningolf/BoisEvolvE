@@ -12,8 +12,7 @@ a {
 
 #navigate {
     text-align: center;
-    /* width: 10px; */
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     position: relative;
     top: -5px;
 }
@@ -156,7 +155,7 @@ input {
 
 footer {    
     position: relative;
-    top:100%;
+    top:20%;
     bottom: 0;
     margin-bottom: 0;
     text-align: center;
@@ -165,8 +164,6 @@ footer {
     font-size: 50px;
     border-top: solid black 2px;
     background-color: rgb(136, 188, 204);
-    opacity: 0.8;
-    /* margin: 0; */
 }
 
 footer > a {

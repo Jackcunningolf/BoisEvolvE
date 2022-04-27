@@ -50,3 +50,4 @@ $dao = new Dao();
 
 </div>
 
+<?php require_once 'footer.php'; ?>
