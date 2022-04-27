@@ -24,17 +24,25 @@ $(function() {
 });
 
 $(function() {
-    $("#leftfeed").hover(function() {
-        $(this).animate({marginLeft: 20, marginRight: 0});
+    $(".promo").hover(function() {
+        $(this).children.animate({marginTop: 0, marginBottom: 10});
     }, function() {
-        $(this).animate({marginLeft: 10})
+        $(this).children.animate({marginTop: 5})
     });
 });
 
-$(function() {
-    $("#rightfeed").hover(function() {
-        $(this).animate({marginLeft: 0, marginRight: 20});
-    }, function() {
-        $(this).animate({marginRight: 10})
-    });
-});
+// $(function() {
+//     $("#leftfeed").hover(function() {
+//         $(this).animate({marginLeft: 20, marginRight: 0});
+//     }, function() {
+//         $(this).animate({marginLeft: 10})
+//     });
+// });
+
+// $(function() {
+//     $("#rightfeed").hover(function() {
+//         $(this).animate({marginLeft: 0, marginRight: 20});
+//     }, function() {
+//         $(this).animate({marginRight: 10})
+//     });
+// });

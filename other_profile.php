@@ -28,7 +28,7 @@ if ($name == $_SESSION['username']) {
 
 <?php 
   $promotions = $dao->getUserPromotions($name); 
-  $promotions = array_reverse($promotions);
+  // $promotions = array_reverse($promotions);
 ?>
 
 <div class="promo_feed">

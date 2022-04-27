@@ -9,7 +9,7 @@ require_once 'Dao.php';
 $dao = new Dao();
 
 $promotions = $dao->getPromotions(); 
-$promotions = array_reverse($promotions);
+// $promotions = array_reverse($promotions);
 ?>
 
 <div class="promo_feed">

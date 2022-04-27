@@ -78,13 +78,15 @@ a {
     padding-bottom: 10px;
     border-radius: 20px;
     background-color: rgb(175, 203, 211);
+
+    box-shadow:0 0 10px #699,0 0 10px #969,0 0 10px #996,0 0 10px #669;
 }
 
 .promo > p {
     padding: 10px;
 }
 
-.promo:hover {
+.promo:hover, .promo_comment:hover {
     background-color: rgb(189, 215, 223);
 }
 

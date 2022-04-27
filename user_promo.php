@@ -9,7 +9,7 @@ $dao = new Dao();
 
 $promotion = $dao->getPromotion($_GET['id']);
 $comments = $dao->getPromoComments($_GET['id']);
-$comments = array_reverse($comments);
+// $comments = array_reverse($comments);
 // echo print_r($comments, 1);
 ?>
  

@@ -38,7 +38,7 @@ $dao = new Dao();
 
 <?php 
   $promotions = $dao->getUserPromotions($_SESSION['username']);
-  $promotions = array_reverse($promotions);
+  // $promotions = array_reverse($promotions);
 ?>
 
 <div class="promo_feed">
